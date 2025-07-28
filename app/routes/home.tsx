@@ -10,9 +10,9 @@ export function meta({}: Route.MetaArgs) {
   ]
 }
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+    <main className="bg-[url('/images/bg-main.svg')] bg-cover min-h-screen flex items-center justify-center">
       <Navbar />
 
       <section className="main-section">
@@ -32,3 +32,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home
