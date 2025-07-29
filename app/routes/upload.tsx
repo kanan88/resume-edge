@@ -61,6 +61,10 @@ const Upload = () => {
                 <label htmlFor="uploader">Upload Resume</label>
                 <div>Uploader</div>
               </div>
+
+              <button type="submit" className="primary-button">
+                Analyze Resume
+              </button>
             </form>
           )}
         </div>
