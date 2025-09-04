@@ -4,10 +4,7 @@ import { usePuterStore } from '~/lib/puter'
 
 export const meta = ({}) => [
   { title: 'Resume Edge - Auth' },
-  {
-    name: 'description',
-    content: 'Log into your account'
-  }
+  { name: 'description', content: 'Log into your account' }
 ]
 
 const Auth = () => {
