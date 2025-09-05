@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
-
+import ScoreCircle from '~/components/ScoreCircle'
 import { usePuterStore } from '~/lib/puter'
-import ScoreCircle from './ScoreCircle'
 
 const ResumeCard = ({
   resume: { id, companyName, jobTitle, feedback, imagePath }
@@ -15,9 +14,7 @@ const ResumeCard = ({
   useEffect(() => {
     const loadResume = async () => {
       const blob = await fs.read(imagePath)
-
       if (!blob) return
-
       let url = URL.createObjectURL(blob)
       setResumeUrl(url)
     }
@@ -27,8 +24,8 @@ const ResumeCard = ({
 
   return (
     <Link
-      to={`/resumes/${id}`}
-      className="resume-card animate-in fade-in duration-100"
+      to={`/resume/${id}`}
+      className="resume-card animate-in fade-in duration-1000"
     >
       <div className="resume-card-header">
         <div className="flex flex-col gap-2">
@@ -36,7 +33,7 @@ const ResumeCard = ({
             <h2 className="!text-black font-bold break-words">{companyName}</h2>
           )}
           {jobTitle && (
-            <h3 className="text-lg break-word text-gray-500">{jobTitle}</h3>
+            <h3 className="text-lg break-words text-gray-500">{jobTitle}</h3>
           )}
           {!companyName && !jobTitle && (
             <h2 className="!text-black font-bold">Resume</h2>
@@ -50,9 +47,9 @@ const ResumeCard = ({
         <div className="gradient-border animate-in fade-in duration-1000">
           <div className="w-full h-full">
             <img
-              src={imagePath}
+              src={resumeUrl}
               alt="resume"
-              className="w-full h-[350px] max-sm:h-[200px] object-cover"
+              className="w-full h-[350px] max-sm:h-[200px] object-cover object-top"
             />
           </div>
         </div>
@@ -60,5 +57,4 @@ const ResumeCard = ({
     </Link>
   )
 }
-
 export default ResumeCard
