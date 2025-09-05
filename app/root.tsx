@@ -8,9 +8,9 @@ import {
 } from 'react-router'
 
 import { useEffect } from 'react'
+import { usePuterStore } from '~/lib/puter'
 import type { Route } from './+types/root'
 import './app.css'
-import { usePuterStore } from './lib/puter'
 
 export const links: Route.LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
