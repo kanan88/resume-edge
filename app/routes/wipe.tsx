@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
+
 import { usePuterStore } from '~/lib/puter'
 
 const WipeApp = () => {

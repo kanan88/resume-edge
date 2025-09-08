@@ -1,18 +1,16 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router'
+
 import Navbar from '~/components/Navbar'
 import ResumeCard from '~/components/ResumeCard'
 import { usePuterStore } from '~/lib/puter'
-import type { Route } from './+types/home'
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: 'Resume Edge' },
-    { name: 'description', content: 'Smart feedback for your dream job!' }
-  ]
-}
+export const meta = () => [
+  { title: 'Resume Edge' },
+  { name: 'description', content: 'Smart feedback for your dream job!' }
+]
 
-export default function Home() {
+const Home = () => {
   const { auth, kv } = usePuterStore()
   const navigate = useNavigate()
   const [resumes, setResumes] = useState<Resume[]>([])
@@ -81,3 +79,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home
