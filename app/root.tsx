@@ -8,7 +8,7 @@ import {
   ScrollRestoration
 } from 'react-router'
 
-import { Analytics } from '@vercel/analytics/next'
+import { Analytics } from '@vercel/analytics/react'
 import { usePuterStore } from '~/lib/puter'
 import type { Route } from './+types/root'
 import './app.css'
