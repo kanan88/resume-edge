@@ -7,6 +7,11 @@ import { usePuterStore } from '~/lib/puter'
 import { generateUUID } from '~/lib/utils'
 import { prepareInstructions } from '../../constants'
 
+export const meta = () => [
+  { title: 'Resume Edge | Upload ' },
+  { name: 'description', content: 'Upload your resume' }
+]
+
 const Upload = () => {
   const { fs, ai, kv } = usePuterStore()
   const navigate = useNavigate()

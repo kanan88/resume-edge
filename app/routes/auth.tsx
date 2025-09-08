@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router'
 import { usePuterStore } from '~/lib/puter'
 
 export const meta = ({}) => [
-  { title: 'Resume Edge - Auth' },
+  { title: 'Resume Edge | Auth' },
   { name: 'description', content: 'Log into your account' }
 ]
 
